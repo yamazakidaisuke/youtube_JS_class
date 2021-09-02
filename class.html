@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+<h1>Class</h1>
+<script>
+//クラス(クラス名の先頭は大文字にする！)
+
+    //曜日配列を用意
+    const day = ["日", "月", "火", "水", "木", "金", "土"];
+    //Dateオブジェクトを使えるようにする
+    function D() {
+        return new Date();      //日付オブジェクトを取得
+    }
+    //年を取得
+    function year(){
+        const v = D();          //日付オブジェクトを取得
+        return v.getFullYear(); //年を取得
+    }
+    //月を取得
+    function month(){
+        const v = D();          //日付オブジェクトを取得
+        return v.getMonth()+1;  //月を取得（＋１をする）
+    }
+    //日を取得
+    function date(){
+        const v = D();          //日付オブジェクトを取得
+        return v.getDate();     //日を取得
+    }
+    //日を取得
+    function day(){
+        const v = D();          //日付オブジェクトを取得
+        return v.getDay();      //日を取得
+    }
+    //2桁0対応(1時→01時)
+    function _o(s) {
+        return ('0' + s).slice(-2);
+    }
+    //年-月-日
+    function _D() {
+        return "-";
+    };
+
+    //関数実行！
+    
+    //DOM表示
+    
+
+
+
+
+</script>
+</body>
+</html>
