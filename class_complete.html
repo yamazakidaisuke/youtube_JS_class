@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+<h1>Class</h1>
+<script>
+//クラス(クラス名の先頭は大文字にする！)
+class D {
+    //Classをnewした時に一番最初に実行されます！自動で！
+    constructor(){
+        //曜日配列を用意
+        this.day = ["日", "月", "火", "水", "木", "金", "土"];
+        this.D = new Date();      //日付オブジェクトを取得
+    }
+    //年を取得
+    year(){
+        return this.D.getFullYear(); //年を取得
+    }
+    //月を取得
+    month(){
+        return this.D.getMonth()+1;  //月を取得（＋１をする）
+    }
+    //日を取得
+    date(){
+        return this.D.getDate();     //日を取得
+    }
+    //曜日を取得
+    days(){
+        return this.D.getDay();      //曜日を取得0~6
+    }
+    //2桁0対応(1時→01時)
+    _o(s) {
+        return ('0' + s).slice(-2);
+    }
+    //年-月-日
+    _D() {
+        return "-";
+    };
+}
+
+//関数実行！
+const date = new D();
+const y = date.year();
+const m = date.month();
+const d = date.date();
+const h = date._D();
+//DOM表示
+document.querySelector("h1").innerHTML= y+h+m+h+d;
+
+
+
+
+</script>
+</body>
+</html>
